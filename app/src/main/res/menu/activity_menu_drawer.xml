@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_ternera"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Ternera" />
+        <item
+            android:id="@+id/nav_alimento"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Alimentos" />
+        <item
+            android:id="@+id/nav_enfermedad"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Enfermedades" />
+        <item
+            android:id="@+id/nav_medicamento"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Medicamentos" />
+        <item
+            android:id="@+id/nav_salir"
+            android:icon="@drawable/ic_exit"
+            android:title="Salir" />
+
+    </group>
+
+
+</menu>
