@@ -1,8 +1,12 @@
 package com.example.utec.gncpfinal;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,8 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class MenuActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MenuActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private TextView txtMostrarNombreUsu;
 
@@ -31,14 +34,6 @@ public class MenuActivity extends AppCompatActivity
 
         txtMostrarNombreUsu.setText("" + bundle.getString("USUARIO"));
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -48,6 +43,7 @@ public class MenuActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setItemIconTintList(null);
     }
 
     @Override
@@ -88,19 +84,28 @@ public class MenuActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
         if (id == R.id.nav_ternera) {
-            // Handle the camera action
+            fragmentManager.beginTransaction().replace(R.id.escenario, new BlankFragment()).commit();
+
         } else if (id == R.id.nav_ternera) {
+            fragmentManager.beginTransaction().replace(R.id.escenario, new BlankFragment()).commit();
 
         } else if (id == R.id.nav_alimento) {
+            fragmentManager.beginTransaction().replace(R.id.escenario, new BlankFragment()).commit();
 
         } else if (id == R.id.nav_enfermedad) {
+            fragmentManager.beginTransaction().replace(R.id.escenario, new EnfermedadesMenuFragment()).commit();
 
         } else if (id == R.id.nav_medicamento) {
+            fragmentManager.beginTransaction().replace(R.id.escenario, new BlankFragment()).commit();
 
         } else if (id == R.id.nav_salir) {
 
         }
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

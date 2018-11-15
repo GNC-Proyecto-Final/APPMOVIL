@@ -6,19 +6,19 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_ternera"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ternera"
             android:title="Ternera" />
         <item
             android:id="@+id/nav_alimento"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/alimentotern"
             android:title="Alimentos" />
         <item
             android:id="@+id/nav_enfermedad"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ternenfermedad"
             android:title="Enfermedades" />
         <item
             android:id="@+id/nav_medicamento"
-            android:icon="@drawable/ic_menu_share"
+            android:icon="@drawable/termed"
             android:title="Medicamentos" />
         <item
             android:id="@+id/nav_salir"

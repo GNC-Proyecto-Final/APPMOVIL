@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:ems="10"
-        android:hint="Ingrese su Usuario"
+        android:hint="Ingrese su usuario"
         android:inputType="text"
         android:textSize="24sp" />
 
@@ -26,17 +26,21 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:ems="10"
-        android:hint="Ingrese su Contraseña"
+        android:hint="Ingrese su contraseña"
         android:inputType="textPassword"
         android:textSize="24sp" />
 
     <Button
         android:id="@+id/buttonIngresar"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="INGRESAR"
         android:textSize="18sp" />
 
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/frame_containter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.constraint.ConstraintLayout>
 
 </LinearLayout>
