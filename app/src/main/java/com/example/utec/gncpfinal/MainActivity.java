@@ -21,36 +21,19 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String USUARIO = "USUARIO";
-    public static final String CONTRASENIA = "CONTRASENIA";
-
-
-    private EditText usuarioText;
-    private EditText passText;
-    private Button buttonIngresar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        usuarioText = findViewById(R.id.editTextForUsuario);
-        passText = findViewById(R.id.editTextForPassword);
-        buttonIngresar = findViewById(R.id.buttonIngresar);
-
-
-
-
+        final Button buttonIngresar = findViewById(R.id.buttonIngresar);
         buttonIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Intent intent = new Intent(MainActivity.this, MenuActivity.class);
-                Bundle b = new Bundle();
-
                     getUsuarios();
-
-                    intent.putExtras(b);
                     startActivity(intent);
                 }
 
@@ -59,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void getUsuarios() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:8081")
+                .baseUrl("http://10.0.2.2:8081/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         UsuariosService service = retrofit.create(UsuariosService.class);
