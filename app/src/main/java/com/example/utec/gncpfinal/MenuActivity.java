@@ -1,8 +1,11 @@
 package com.example.utec.gncpfinal;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -32,7 +35,7 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         txtMostrarNombreUsu = (TextView) findViewById(R.id.textViewNombreUsu);
         Bundle bundle = this.getIntent().getExtras();
 
-        txtMostrarNombreUsu.setText("" + bundle.getString("USUARIO"));
+       // txtMostrarNombreUsu.setText("" + bundle.getString("USUARIO"));
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -102,7 +105,7 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
             fragmentManager.beginTransaction().replace(R.id.escenario, new BlankFragment()).commit();
 
         } else if (id == R.id.nav_salir) {
-
+            salir();
         }
 
 
@@ -110,5 +113,26 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+
+    public void salir(){
+
+        SharedPreferences sharedPref = getSharedPreferences("sesionPreference",Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+
+        editor.remove("idUsuario");
+        editor.remove("apellido");
+        editor.remove("contrasenia");
+        editor.remove("nombre");
+        editor.remove("perfil");
+        editor.remove("username");
+
+        editor.clear();
+        editor.apply();
+        editor.commit();
+        Intent intent = new Intent(MenuActivity.this, MainActivity.class);
+        startActivity(intent);
+
     }
 }
