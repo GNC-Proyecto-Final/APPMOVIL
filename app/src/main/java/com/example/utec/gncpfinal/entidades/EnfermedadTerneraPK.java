@@ -18,6 +18,8 @@ public class EnfermedadTerneraPK implements Serializable {
 
 	private Date fechaDesde;
 
+
+
 	public EnfermedadTerneraPK() {
 		super();
 	}

@@ -25,7 +25,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Enfermedades extends AppCompatActivity {
 
     private ListView listView;
-    private Button buttonAnterior,buttonSiguiente;
 
     ArrayList<String> listaInformacion = new ArrayList<String>();
     ArrayList<Enfermedad> listaEnfermedades = new ArrayList<Enfermedad>();
