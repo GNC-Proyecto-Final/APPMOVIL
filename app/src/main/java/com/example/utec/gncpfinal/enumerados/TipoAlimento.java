@@ -1,4 +1,4 @@
-package enumerados;
+package com.example.utec.gncpfinal.enumerados;
 
 public enum TipoAlimento {
 	CAALOSTRONATURAL("Calostro Natural",10), CALOSTROFORZADO("Calostro Forzado",11),

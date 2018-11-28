@@ -1,8 +1,10 @@
 package com.example.utec.gncpfinal.entidades;
 
+import com.example.utec.gncpfinal.enumerados.NombreEnfermedad;
+
 import java.util.List;
 
-import enumerados.NombreEnfermedad;
+
 
 
 public class Enfermedad {
@@ -11,7 +13,7 @@ public class Enfermedad {
 
 	private long gradoGravedad;
 
-	private enumerados.NombreEnfermedad nombre;
+	private NombreEnfermedad nombre;
 	
 
 	private List<EnfermedadTernera> enfermedadTerneras;

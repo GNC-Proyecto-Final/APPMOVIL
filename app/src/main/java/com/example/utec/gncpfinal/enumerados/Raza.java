@@ -1,4 +1,4 @@
-package enumerados;
+package com.example.utec.gncpfinal.enumerados;
 
 public enum Raza {
 	HOLANDO("Holando"), JERSEY("Jersey"),CRUZA("Cruza");

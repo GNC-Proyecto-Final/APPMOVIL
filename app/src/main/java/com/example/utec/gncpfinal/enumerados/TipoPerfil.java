@@ -1,4 +1,4 @@
-package enumerados;
+package com.example.utec.gncpfinal.enumerados;
 
 public enum TipoPerfil {
 	PERSONAL("Personal"), ENCARGADO("Encargado");
