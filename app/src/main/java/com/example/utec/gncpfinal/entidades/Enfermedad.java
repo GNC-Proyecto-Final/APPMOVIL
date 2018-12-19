@@ -2,12 +2,13 @@ package com.example.utec.gncpfinal.entidades;
 
 import com.example.utec.gncpfinal.enumerados.NombreEnfermedad;
 
+import java.io.Serializable;
 import java.util.List;
 
 
 
 
-public class Enfermedad {
+public class Enfermedad implements Serializable {
 
 	private long idEnfermedad;
 
@@ -20,6 +21,11 @@ public class Enfermedad {
 
 	public Enfermedad() {
 		super();
+	}
+
+	public Enfermedad(long gradoGravedad, NombreEnfermedad nombre) {
+		this.gradoGravedad = gradoGravedad;
+		this.nombre = nombre;
 	}
 
 	public long getIdEnfermedad() {

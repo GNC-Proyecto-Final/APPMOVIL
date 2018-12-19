@@ -1,5 +1,6 @@
 package com.example.utec.gncpfinal.entidades;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -9,7 +10,7 @@ import java.util.List;
  * 
  */
 
-public class Padre {
+public class Padre  implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private long idPadre;

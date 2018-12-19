@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <TextView
+        android:id="@+id/textViewEdEnFechaInicio"
+        android:layout_width="166dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/editTextFechaFin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toEndOf="@+id/textViewFechaInicio" />
+
+    <TextView
+        android:id="@+id/textViewEdEnEnfermedad"
+        android:layout_width="166dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#000000"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/textViewEdEnFechaInicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toEndOf="@+id/textViewEnfermedad" />
+
+    <EditText
+        android:id="@+id/editTextFechaFin"
+        android:layout_width="166dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#000000"
+        android:ems="9"
+        android:hint="@string/formato_fecha"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/editTextOtrosAspect"
+        app:layout_constraintStart_toEndOf="@+id/textViewFechaFin" />
+
+
+    <EditText
+        android:id="@+id/editTextOtrosAspect"
+        android:layout_width="225dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="32dp"
+        android:textColor="#000000"
+        android:ems="10"
+        android:inputType="textMultiLine|textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btnEditarTerneraEnferma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintStart_toEndOf="@+id/textViewDiasEnfermo" />
+
+    <Button
+        android:id="@+id/btnRegistarTernerasEnfermas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginLeft="76dp"
+        android:layout_marginBottom="72dp"
+        android:onClick="cancelarEditarTernraEnferma"
+        android:text="Cancelar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Cancelar" />
+
+    <Button
+        android:id="@+id/btnEditarTerneraEnferma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="72dp"
+        android:onClick="editarTernraEnferma"
+        android:text="Editar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toEndOf="@+id/btnRegistarTernerasEnfermas"
+        tools:text="Editar" />
+
+    <TextView
+        android:id="@+id/textViewEnfermedad"
+        android:layout_width="110dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="24dp"
+        android:textColor="#000000"
+        android:text="Enfermedad"
+        app:layout_constraintBottom_toTopOf="@+id/textViewFechaInicio"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTernera"
+        android:layout_width="110dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:textColor="#000000"
+        android:text="Ternera"
+        app:layout_constraintBottom_toTopOf="@+id/textViewEnfermedad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.962" />
+
+    <TextView
+        android:id="@+id/textViewFechaFin"
+        android:layout_width="110dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="84dp"
+        android:textColor="#000000"
+        android:text="Fecha Fin"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDiasEnfermo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewFechaInicio"
+        android:layout_width="110dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="32dp"
+        android:textColor="#000000"
+        android:text="Fecha Inicio"
+        app:layout_constraintBottom_toTopOf="@+id/textViewFechaFin"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ib_obtener_fecha_fin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#000000"
+        android:onClick="obtenerFechaFin"
+        android:src="@drawable/calendar"
+        app:layout_constraintBottom_toTopOf="@+id/editTextOtrosAspect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toEndOf="@+id/editTextFechaFin" />
+
+    <TextView
+        android:id="@+id/textViewDiasEnfermo"
+        android:layout_width="110dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="64dp"
+        android:textColor="#000000"
+        android:text="Otros Aspectos"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegistarTernerasEnfermas"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="#000000"
+        android:text="Ingrese Datos Edición Ternera Enferma"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewEdEnTernera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.865" />
+
+    <TextView
+        android:id="@+id/textViewEdEnTernera"
+        android:layout_width="166dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#000000"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/textViewEdEnEnfermedad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toEndOf="@+id/textViewTernera"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.975" />
+
+</android.support.constraint.ConstraintLayout>

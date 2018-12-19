@@ -1,12 +1,14 @@
 package com.example.utec.gncpfinal.entidades;
 
 
+import java.io.Serializable;
+
 /**
  * The primary key class for the CONSUMO_ALIMENTO_TERNERAS database table.
  * 
  */
 
-public class ConsumoAlimentoTerneraPK  {
+public class ConsumoAlimentoTerneraPK implements Serializable {
 
 	private long idTernera;
 

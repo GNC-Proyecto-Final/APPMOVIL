@@ -10,7 +10,7 @@ import java.util.Date;
  * 
  */
 
-public class Peso  {
+public class Peso implements Serializable{
 
 	private long idPeso;
 

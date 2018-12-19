@@ -1,5 +1,6 @@
 package com.example.utec.gncpfinal.entidades;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 
@@ -9,7 +10,7 @@ import java.math.BigDecimal;
  */
 
 
-public class ConsumoAlimentoTernera {
+public class ConsumoAlimentoTernera  implements Serializable {
 
 	private long idAlimento;
 

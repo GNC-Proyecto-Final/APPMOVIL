@@ -1,6 +1,8 @@
 package com.example.utec.gncpfinal.entidades;
 
-public class Usuario {
+import java.io.Serializable;
+
+public class Usuario implements Serializable{
     private long idUsuario;
 
     private String apellido;

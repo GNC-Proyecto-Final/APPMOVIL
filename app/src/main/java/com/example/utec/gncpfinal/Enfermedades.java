@@ -7,11 +7,14 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.example.utec.gncpfinal.entidades.Enfermedad;
 import com.example.utec.gncpfinal.servicios.EnfermedadesServicios;
+import com.example.utec.gncpfinal.servicios.RestClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +28,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Enfermedades extends AppCompatActivity {
 
     private ListView listView;
+    private RadioButton radio_visualizar_enfermedad;
+    private RadioButton radio_eliminar_enfermedad;
+    private ImageView atras,home;
+
 
     ArrayList<String> listaInformacion = new ArrayList<String>();
     ArrayList<Enfermedad> listaEnfermedades = new ArrayList<Enfermedad>();
@@ -35,17 +42,29 @@ public class Enfermedades extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enfermedades);
 
+
+        radio_visualizar_enfermedad=(RadioButton)findViewById(R.id.radio_visualizar_enfermedad);
+        radio_eliminar_enfermedad=(RadioButton)findViewById(R.id.radio_eliminar_enfermedad);
+        atras =(ImageView)findViewById(R.id.imgBtnLisTerEnfBack);
+        home =(ImageView)findViewById(R.id.imgBtnLisTerEnfHome);
         listView = (ListView) findViewById(R.id.listView);
         getEnfermedades();
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int pos, long l) {
-                String informacion="id: "+listaEnfermedades.get(pos).getIdEnfermedad()+"\n";
-                informacion+="Nombre: "+listaEnfermedades.get(pos).getNombre()+"\n";
-                informacion+="Grado de Enfermedad: "+ listaEnfermedades.get(pos).getGradoGravedad()+"\n";
 
-                Toast.makeText(getApplicationContext(),informacion,Toast.LENGTH_LONG).show();
+                if(radio_visualizar_enfermedad.isChecked()){
+
+                    Enfermedad enf = listaEnfermedades.get(pos);
+                    visualizarEnfermedad(enf);
+
+
+                }else if(radio_eliminar_enfermedad.isChecked()){
+                   Enfermedad enf = listaEnfermedades.get(pos);
+                    eliminarEnfermedad(enf);
+                }
+
 
             }
         });
@@ -56,7 +75,7 @@ public class Enfermedades extends AppCompatActivity {
 
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:8180/")
+                .baseUrl(RestClient.getBaseUrl())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         EnfermedadesServicios service = retrofit.create(EnfermedadesServicios.class);
@@ -100,5 +119,36 @@ public class Enfermedades extends AppCompatActivity {
       ArrayAdapter adaptador = new ArrayAdapter(this,android.R.layout.simple_list_item_1,listaInformacion);
       listView.setAdapter(adaptador);
 
+    }
+
+    public void visualizarEnfermedad(Enfermedad enf){
+
+        Intent intent = new Intent(Enfermedades.this,VisualizarEnfermedad.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("enfermedad",enf);
+        intent.putExtras(bundle);
+        startActivity(intent);
+
+    }
+
+    public void eliminarEnfermedad(Enfermedad enf){
+
+        Intent intent = new Intent(Enfermedades.this,EliminarEnfermedad.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("enfermedad",enf);
+        intent.putExtras(bundle);
+        startActivity(intent);
+
+    }
+
+    public void volverBtnLisTerEnBack(View view){
+        Intent intent = new Intent(Enfermedades.this, ListadoMenu.class);
+        startActivity(intent);
+    }
+
+
+    public void homeBtnLisTerEnBack(View view){
+        Intent intent = new Intent(Enfermedades.this, MenuActivity.class);
+        startActivity(intent);
     }
 }

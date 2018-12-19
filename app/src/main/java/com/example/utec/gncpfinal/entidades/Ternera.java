@@ -2,14 +2,14 @@ package com.example.utec.gncpfinal.entidades;
 
 import java.io.Serializable;
 
-import enumerados.Raza;
-import enumerados.TipoParto;
+import com.example.utec.gncpfinal.enumerados.Raza;
+import com.example.utec.gncpfinal.enumerados.TipoParto;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
 
-public class Ternera {
+public class Ternera implements Serializable{
 
 	private long idTernera;
 

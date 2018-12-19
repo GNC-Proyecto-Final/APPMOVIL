@@ -1,5 +1,6 @@
 package com.example.utec.gncpfinal.entidades;
 
+import java.io.Serializable;
 import java.util.Comparator;
 import java.util.Date;
 
@@ -9,7 +10,7 @@ import java.util.Date;
  * 
  */
 
-public class EnfermedadTernera {
+public class EnfermedadTernera  implements Serializable {
 
 
 	private EnfermedadTerneraPK id;

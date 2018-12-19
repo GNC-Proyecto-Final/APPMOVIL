@@ -1,5 +1,6 @@
 package com.example.utec.gncpfinal.entidades;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 
@@ -8,7 +9,7 @@ import java.math.BigDecimal;
  * 
  */
 
-public class ConsumoMedicamentoTernera{
+public class ConsumoMedicamentoTernera implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	//@EmbeddedId

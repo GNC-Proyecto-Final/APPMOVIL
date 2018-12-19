@@ -10,6 +10,9 @@ public class ListadoMenu extends AppCompatActivity {
 
     private Button btnEnfermedades;
     private Button btnTernEnfermas;
+    private Button btnInformeTernEnfermas;
+    private Button buttonHomeListado;
+    private Button buttonMenuListadoEnfemedades;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +21,9 @@ public class ListadoMenu extends AppCompatActivity {
 
         btnEnfermedades = findViewById(R.id.buttonEnfermedades);
         btnTernEnfermas = findViewById(R.id.buttonTernerasEnf);
-
+        btnInformeTernEnfermas = findViewById(R.id.buttonInformeTerEnf);
+        buttonHomeListado = findViewById(R.id.buttonHomeListado);
+        buttonMenuListadoEnfemedades = findViewById(R.id.buttonMenuListadoEnfemedades);
 
         btnEnfermedades.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +37,29 @@ public class ListadoMenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ListadoMenu.this, TernerasEnfermas.class);
+                startActivity(intent);
+            }
+        });
+
+        btnInformeTernEnfermas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ListadoMenu.this, InformeTernerasEnfermas.class);
+                startActivity(intent);
+            }
+        });
+        buttonHomeListado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    Intent intent = new Intent(ListadoMenu.this, MenuActivity.class);
+                    startActivity(intent);
+            }
+        });
+
+        buttonMenuListadoEnfemedades.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ListadoMenu.this, MenuEnfermedad.class);
                 startActivity(intent);
             }
         });

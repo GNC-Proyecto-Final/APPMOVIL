@@ -1,4 +1,5 @@
 package com.example.utec.gncpfinal.entidades;
+import java.io.Serializable;
 import java.util.List;
 
 
@@ -7,7 +8,7 @@ import java.util.List;
  * 
  */
 
-public class Guachera {
+public class Guachera  implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private long idGuachera;

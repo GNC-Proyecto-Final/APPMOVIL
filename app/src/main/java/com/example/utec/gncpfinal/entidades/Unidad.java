@@ -1,6 +1,7 @@
 package com.example.utec.gncpfinal.entidades;
 
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -8,7 +9,7 @@ import java.util.List;
  * 
  */
 
-public class Unidad  {
+public class Unidad implements Serializable{
 
 	private long idUnidad;
 

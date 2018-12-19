@@ -10,6 +10,8 @@ public class RegistroMenu extends AppCompatActivity {
 
     private Button btnNuevaEnf;
     private Button btnTernEnf;
+    private Button buttonHome;
+    private Button buttonMenuEnfermedades;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +19,9 @@ public class RegistroMenu extends AppCompatActivity {
         setContentView(R.layout.activity_registro_menu);
 
         btnNuevaEnf = findViewById(R.id.buttonNuevaEnf);
-        btnTernEnf = findViewById(R.id.buttonTernEnf);
+        btnTernEnf = findViewById(R.id.buttonTernEnferma);
+        buttonHome = findViewById(R.id.buttonHome);
+        buttonMenuEnfermedades = findViewById(R.id.buttonMenuEnfermedades);
 
 
         btnNuevaEnf.setOnClickListener(new View.OnClickListener() {
@@ -31,9 +35,24 @@ public class RegistroMenu extends AppCompatActivity {
         btnTernEnf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegistroMenu.this, TerneraEnferma.class);
+                Intent intent = new Intent(RegistroMenu.this, NuevaTerneraEnferma.class);
                 startActivity(intent);
             }
         });
+        buttonHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegistroMenu.this, MenuActivity.class);
+                startActivity(intent);
+            }
+        });
+        buttonMenuEnfermedades.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegistroMenu.this, MenuEnfermedad.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

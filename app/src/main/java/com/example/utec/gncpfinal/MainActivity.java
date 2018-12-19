@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.utec.gncpfinal.entidades.Usuario;
+import com.example.utec.gncpfinal.servicios.RestClient;
 import com.example.utec.gncpfinal.servicios.UsuariosService;
 
 import retrofit2.Call;
@@ -65,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:8180/")
+                .baseUrl(RestClient.getBaseUrl())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
