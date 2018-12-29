@@ -61,7 +61,14 @@ public class VisualizarTerneraEnferma extends AppCompatActivity {
                 txtFechaInicio.setText(dti);
                 txtFechaFin.setText(dtf);
             }
-            txtOtrosAspectos.setText(enferTern.getObservacion().toString());
+
+            if(enferTern.getObservacion().isEmpty())
+            {
+                txtOtrosAspectos.setText("");
+            }else{
+                txtOtrosAspectos.setText(enferTern.getObservacion().toString());
+            }
+
 
         }
     }

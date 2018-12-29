@@ -34,7 +34,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="10dp"
-        android:text="SELECCIONE UNA OPCION"
+        android:text="OPCIONES DE LISTADOS"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonEnfermedades"
         app:layout_constraintEnd_toEndOf="parent"
