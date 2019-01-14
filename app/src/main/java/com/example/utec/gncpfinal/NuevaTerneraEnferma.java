@@ -147,38 +147,44 @@ public class NuevaTerneraEnferma extends AppCompatActivity implements DialogoEnf
     public void agregarTerneraEnferma() {
 
         boolean valido= true;
+        String mensaje = "";
         formatoFecha();
         long numTernera = Long.parseLong(editTextTernera.getText().toString());
         long numEnfermedad = Long.parseLong(editTextEnfermedad.getText().toString());
 
         if(!(ternera.getFechaMuerte()==null)||!(ternera.getFechaBaja()==null)){
             valido = false;
+            mensaje = "Verifique que la ternera este habilitada, ternera muerta o dada de baja.\n";
             Toast.makeText(this, "Verifique que la ternera este habilitada, ternera muerta o dada de baja.", Toast.LENGTH_LONG).show();
         }
 
         if( !validarFecha()){
             valido = false;
+            mensaje += "Verifique las fechas: \n Fecha Inicio o Fin mayor a fecha actual.\n";
             Toast.makeText(getApplicationContext(), "Verifique las fechas: \n Fecha Inicio o Fin mayor a fecha actual.", Toast.LENGTH_LONG).show();
         }
 
         if(!validarFechaNaciento()){
             valido = false;
+            mensaje += "Verifique la fecha inicio enfermedad - fecha inicio enfermedad < nacimiento.\n";
             Toast.makeText(getApplicationContext(), "Verifique la fecha inicio enfermedad - fecha inicio enfermedad < nacimiento.", Toast.LENGTH_LONG).show();
         }
 
         if (this.editTextOtrosAspectos.length()==0) {
             valido = false;
+            mensaje += "Otros aspectos Sanitarios \n Ingrese un comentario.\n";
             Toast.makeText(getApplicationContext(), "Otros aspectos Sanitarios \n Ingrese un comentario.", Toast.LENGTH_LONG).show();
         }
 
         if (this.editTextOtrosAspectos.length()>=250) {
             valido = false;
+            mensaje += "Otros aspectos Sanitarios \n Excede de los 250 caracteres.\n";
             Toast.makeText(getApplicationContext(), "Otros aspectos Sanitarios \n Excede de los 250 caracteres.", Toast.LENGTH_LONG).show();
         }
 
         // Si alguno es vacio, mostramos una ventana de mensaje
         if(!valido){
-            Toast.makeText(getApplicationContext(), "Verifique los datos no correctos.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), mensaje, Toast.LENGTH_LONG).show();
         }
         else if(numTernera==0 && numEnfermedad==0 &&  dateInicio == null ) {
 
