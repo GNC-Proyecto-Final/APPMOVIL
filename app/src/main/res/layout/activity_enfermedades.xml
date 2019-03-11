@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/appbackground"
     tools:context=".Enfermedades">
 
     <TextView
@@ -17,6 +18,7 @@
         android:layout_marginRight="8dp"
         android:textSize="18sp"
         android:text="Listado de Enfermedades"
+        android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -56,7 +58,7 @@
     <ListView
         android:id="@+id/listView"
         android:layout_width="355dp"
-        android:layout_height="379dp"
+        android:layout_height="388dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -74,15 +76,15 @@
         android:id="@+id/imgBtnLisTerEnfHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:onClick="homeBtnLisTerEnBack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listView"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.408"
         app:srcCompat="@drawable/home24" />
 
     <ImageButton
@@ -101,7 +103,7 @@
         app:layout_constraintHorizontal_bias="0.003"
         app:layout_constraintStart_toEndOf="@+id/imgBtnLisTerEnfHome"
         app:layout_constraintTop_toBottomOf="@+id/listView"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.408"
         app:srcCompat="@drawable/arrow8124" />
 
 </android.support.constraint.ConstraintLayout>

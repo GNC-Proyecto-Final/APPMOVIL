@@ -6,4 +6,5 @@
     android:textStyle="bold"
     android:padding="8sp"
     android:textColor="#a1150e"
+    android:background="@drawable/appbackground"
     xmlns:android="http://schemas.android.com/apk/res/android" />

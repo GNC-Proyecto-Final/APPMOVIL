@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/appbackground"
     tools:context=".VisualizarEnfermedad">
 
     <TextView
@@ -15,6 +16,7 @@
         android:layout_marginTop="72dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.301"
         app:layout_constraintStart_toEndOf="@+id/textViewNombre"
@@ -30,6 +32,7 @@
         android:layout_marginEnd="28dp"
         android:layout_marginRight="28dp"
         android:text=" "
+        android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toEndOf="@+id/textViewGradoGravedad"
@@ -47,12 +50,13 @@
         android:layout_marginBottom="8dp"
         android:text="Datos de  Enfermedad"
         android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.017" />
+        app:layout_constraintVertical_bias="0.038" />
 
     <TextView
         android:id="@+id/textViewNombre"
@@ -62,6 +66,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="72dp"
         android:text="Nombre:"
+        android:textColor="@color/colorBlack"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewIngDatNuevaEnf" />
@@ -75,6 +80,7 @@
         android:layout_marginTop="72dp"
         android:layout_marginBottom="8dp"
         android:text="Grado:"
+        android:textColor="@color/colorBlack"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonEnfRegresar"
         app:layout_constraintStart_toStartOf="parent"

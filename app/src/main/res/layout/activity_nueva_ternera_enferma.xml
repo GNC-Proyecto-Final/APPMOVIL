@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/appbackground"
     tools:context=".NuevaTerneraEnferma">
 
 
@@ -17,6 +18,7 @@
         android:ems="10"
         android:hint="@string/formato_fecha"
         android:inputType="date"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toTopOf="@+id/textViewFechaFin"
         app:layout_constraintStart_toEndOf="@+id/textViewFechaInicio" />
 
@@ -29,6 +31,7 @@
         android:layout_marginBottom="12dp"
         android:ems="10"
         android:hint="@string/formato_fecha"
+        android:textColor="@color/colorBlack"
         android:inputType="date"
         app:layout_constraintBottom_toTopOf="@+id/editTextOtrosAspect"
         app:layout_constraintStart_toEndOf="@+id/textViewFechaFin" />
@@ -44,6 +47,7 @@
         android:ems="10"
         android:inputType="number"
         android:text="0"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toTopOf="@+id/ib_obtener_fecha_ini"
         app:layout_constraintStart_toEndOf="@+id/textViewEnfermedad" />
 
@@ -58,6 +62,7 @@
         android:ems="10"
         android:inputType="textPersonName|number"
         android:text="0"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextEnfermedad"
         app:layout_constraintStart_toEndOf="@+id/textViewTernera"
         app:layout_constraintTop_toTopOf="parent"
@@ -73,6 +78,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="28dp"
         android:ems="10"
+        android:textColor="@color/colorBlack"
         android:inputType="textMultiLine|textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/btnRegistarTernerasEnfermas"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,6 +96,7 @@
         android:layout_marginBottom="48dp"
         android:onClick="registrar"
         android:text="Registar"
+        android:background="@drawable/rounded_corner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.459"
@@ -104,6 +111,7 @@
         android:layout_marginBottom="48dp"
         android:onClick="volver"
         android:text="Cancelar"
+        android:background="@drawable/rounded_corner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -115,6 +123,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="44dp"
         android:text="Enfermedad"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toTopOf="@+id/textViewFechaInicio"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -127,6 +136,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="40dp"
         android:text="Ternera"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toTopOf="@+id/textViewEnfermedad"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -140,6 +150,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="80dp"
         android:text="Fecha Fin"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toTopOf="@+id/textViewDiasEnfermo"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -151,6 +162,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="40dp"
         android:text="Fecha Inicio"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toTopOf="@+id/textViewFechaFin"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -231,6 +243,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="56dp"
         android:text="Otros Aspectos"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toTopOf="@+id/btnRegistarTernerasEnfermas"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -246,6 +259,7 @@
         android:layout_marginBottom="24dp"
         android:text="Ingrese Datos Nueva Ternera Enferma"
         android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toTopOf="@+id/editTextTernera"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.369"

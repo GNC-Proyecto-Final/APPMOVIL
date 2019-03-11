@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/appbackground"
     tools:context=".MenuEnfermedad">
 
     <Button
@@ -18,6 +19,7 @@
         android:layout_marginBottom="50dp"
         android:text="Inicio"
         android:textSize="24sp"
+        android:background="@drawable/rounded_corner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,6 +37,7 @@
         android:layout_marginBottom="30dp"
         android:text="Registro"
         android:textSize="24sp"
+        android:background="@drawable/rounded_corner"
         app:layout_constraintBottom_toTopOf="@+id/buttonListado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,6 +55,7 @@
         android:layout_marginBottom="30dp"
         android:text="Listado"
         android:textSize="24sp"
+        android:background="@drawable/rounded_corner"
         app:layout_constraintBottom_toTopOf="@+id/buttonMenuInicio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,6 +73,7 @@
         android:layout_marginBottom="20dp"
         android:text="MENU DE ENFERMEDADES"
         android:textSize="20sp"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toTopOf="@+id/buttonRegistro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"

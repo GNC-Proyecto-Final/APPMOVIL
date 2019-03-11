@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EnfermedadesMenuFragment"
-    android:background="@color/colorWhite">
+    android:background="@drawable/appbackground">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -25,6 +25,7 @@
             android:layout_marginBottom="30dp"
             android:text="Registro"
             android:textSize="24sp"
+            android:background="@drawable/rounded_corner"
             app:layout_constraintBottom_toTopOf="@+id/buttonListado"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,6 +43,7 @@
             android:layout_marginBottom="30dp"
             android:text="Listado"
             android:textSize="24sp"
+            android:background="@drawable/rounded_corner"
             app:layout_constraintBottom_toTopOf="@+id/buttonInicio"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -58,6 +60,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="30dp"
             android:text="SELECCIONE UNA OPCION"
+            android:textColor="@color/colorBlack"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/buttonRegistro"
             app:layout_constraintEnd_toEndOf="parent"
@@ -77,6 +80,7 @@
             android:layout_marginBottom="50dp"
             android:text="Inicio"
             android:textSize="24sp"
+            android:background="@drawable/rounded_corner"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

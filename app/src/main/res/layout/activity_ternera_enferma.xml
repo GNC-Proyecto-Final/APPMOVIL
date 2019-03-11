@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/appbackground"
     tools:context=".TerneraEnferma">
 
 
@@ -16,6 +17,7 @@
         android:layout_marginBottom="20dp"
         android:ems="10"
         android:hint="@string/formato_fecha"
+        android:textColor="@color/colorBlack"
         android:inputType="date"
         app:layout_constraintBottom_toTopOf="@+id/textViewFechaFin"
         app:layout_constraintStart_toEndOf="@+id/textViewFechaInicio" />
@@ -29,6 +31,7 @@
         android:layout_marginBottom="17dp"
         android:ems="10"
         android:hint="@string/formato_fecha"
+        android:textColor="@color/colorBlack"
         android:inputType="date"
         app:layout_constraintBottom_toTopOf="@+id/editTextOtrosAspect"
         app:layout_constraintStart_toEndOf="@+id/textViewFechaFin" />
@@ -42,6 +45,7 @@
         android:layout_marginLeft="12dp"
         android:layout_marginBottom="12dp"
         android:ems="10"
+        android:textColor="@color/colorBlack"
         android:inputType="number"
         android:text="0"
         app:layout_constraintBottom_toTopOf="@+id/ib_obtener_fecha_ini"
@@ -57,6 +61,7 @@
         android:ems="10"
         android:inputType="textPersonName|number"
         android:text="0"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextEnfermedad"
         app:layout_constraintStart_toEndOf="@+id/textViewTernera" />
 
@@ -70,6 +75,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="16dp"
         android:ems="10"
+        android:textColor="@color/colorBlack"
         android:inputType="textMultiLine|textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/btnRegistrar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,6 +93,7 @@
         android:layout_marginBottom="64dp"
         android:onClick="registrar"
         android:text="Registar"
+        android:background="@drawable/rounded_corner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.535"
@@ -100,6 +107,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="40dp"
         android:text="Enfermedad"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toTopOf="@+id/textViewFechaInicio"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -111,6 +119,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="40dp"
         android:text="Ternera"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toTopOf="@+id/textViewEnfermedad"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -122,6 +131,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="72dp"
         android:text="Fecha Fin"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toTopOf="@+id/textViewOtrosAspectos"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -133,6 +143,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="40dp"
         android:text="Fecha Inicio"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toTopOf="@+id/textViewFechaFin"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -210,6 +221,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="64dp"
         android:text="Otros Aspectos"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toTopOf="@+id/btnRegistrar"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -224,11 +236,12 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="24dp"
         android:text="Ingrese Datos Nueva Ternera Enferma"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toTopOf="@+id/editTextTernera"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.344" />
 
 </android.support.constraint.ConstraintLayout>

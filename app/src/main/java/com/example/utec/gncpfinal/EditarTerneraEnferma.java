@@ -135,7 +135,7 @@ public class EditarTerneraEnferma extends AppCompatActivity{
         }
 
         if( !validarFecha()){
-            Toast.makeText(getApplicationContext(), "Verifique las fechas: \n Fecha Inicio o Fin mayor a fecha actual.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Verifique las fechas: \n La Fecha Inicio o Fin mayor a fecha actual.", Toast.LENGTH_LONG).show();
         }
 
         if(!validarFechaNaciento()){
@@ -153,23 +153,23 @@ public class EditarTerneraEnferma extends AppCompatActivity{
         // Si alguno es vacio, mostramos una ventana de mensaje
         if(numTernera==0 && numEnfermedad==0 &&  dateInicio == null ) {
 
-            Toast.makeText(getApplicationContext(), "Faltan algunos datos1.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Faltan algunos datos.", Toast.LENGTH_LONG).show();
         }
         else if(numTernera==0 && numEnfermedad==0 ) {
 
-            Toast.makeText(getApplicationContext(), "Faltan algunos datos2.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Faltan algunos datos.", Toast.LENGTH_LONG).show();
         }
         else if(numTernera==0 ) {
 
-            Toast.makeText(getApplicationContext(), "Faltan algunos datos3.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Faltan algunos datos.", Toast.LENGTH_LONG).show();
         }
         else if(numEnfermedad==0 ) {
 
-            Toast.makeText(getApplicationContext(), "Faltan algunos datos4.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Faltan algunos datos.", Toast.LENGTH_LONG).show();
         }
         else if(dateInicio==null ) {
 
-            Toast.makeText(getApplicationContext(), "Faltan algunos datos5." + terneraEnferma.getId().getFechaDesde().toString(), Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Faltan algunos datos." + terneraEnferma.getId().getFechaDesde().toString(), Toast.LENGTH_LONG).show();
         }
         else{
             editar();

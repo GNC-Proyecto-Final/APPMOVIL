@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/appbackground"
     tools:context=".NuevaEnfermedad">
 
     <TextView
@@ -17,13 +18,13 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="Ingrese Datos Nueva Enfermedad"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.017" />
+        app:layout_constraintVertical_bias="0.041" />
 
     <Spinner
         android:id="@+id/spinnerForNombre"
@@ -71,6 +72,7 @@
         android:layout_marginBottom="8dp"
         android:text="Nombre:"
         android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/spinnerForNombre"
         app:layout_constraintHorizontal_bias="0.476"
@@ -88,6 +90,7 @@
         android:layout_marginBottom="8dp"
         android:text="Grado:"
         android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -106,6 +109,7 @@
         android:onClick="guardar"
         android:text="Guardar"
         android:textSize="19sp"
+        android:background="@drawable/rounded_corner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonCancelar"
@@ -123,6 +127,7 @@
         android:onClick="cancelar"
         android:text="Cancelar"
         android:textSize="19sp"
+        android:background="@drawable/rounded_corner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewGradoGravedad"
